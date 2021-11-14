@@ -9,6 +9,7 @@ document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
 	console.log(video.currentTime);
+	document.querySelector("#volume").innerHTML=video.volume *100 +"%"
 });
 
 //pause video
@@ -20,7 +21,7 @@ document.querySelector("#pause").addEventListener("click", function() {
 //slow the video
 document.querySelector("#slower").addEventListener("click", function() {
 	console.log("Old video speed is " + video.playbackRate);
-	video.playbackRate = 0.5;
+	video.playbackRate *= .95;
 	console.log("New video speed is " + video.playbackRate);
 });
 
